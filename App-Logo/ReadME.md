@@ -25,7 +25,7 @@ assets/
  └── icon/
      └── app_icon.png
 ```
-
+<img width="206" height="113" alt="image" src="https://github.com/user-attachments/assets/13c82005-58dd-4ba0-be60-e238b97a48a7" />
 
 ## Step 2: pubspec.yaml আপডেট করুন
 
@@ -35,6 +35,7 @@ assets/
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
 ```
+<img width="924" height="442" alt="image" src="https://github.com/user-attachments/assets/45fd0cdc-1da5-488c-8b58-ac0075281f45" />
 
 ### (B) নিচে একদম শেষে এই block add করুন:
 
@@ -48,6 +49,7 @@ flutter_launcher_icons:
 ```
 
 > Android-only app হলে `ios: false` রাখলেই হবে
+<img width="970" height="324" alt="image" src="https://github.com/user-attachments/assets/1f76af28-2319-4453-9e08-693938b6b265" />
 
 
 ## Step 3: Command রান করুন
@@ -60,7 +62,7 @@ flutter pub run flutter_launcher_icons
 ```
 
 ১০–২০ সেকেন্ড লাগবে।
-
+<img width="1101" height="595" alt="image" src="https://github.com/user-attachments/assets/dec1ba81-df93-4fa5-a4ed-1afa0c574c31" />
 
 ## Step 4: App রান করে দেখুন
 
