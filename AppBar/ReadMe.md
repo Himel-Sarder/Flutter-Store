@@ -1,3 +1,6 @@
+<img width="356" height="734" alt="image" src="https://github.com/user-attachments/assets/e578aadb-d3c6-4736-a144-cf1111154ea0" />
+
+
 ## Basic AppBar Structure
 
 ```dart
