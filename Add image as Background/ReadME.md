@@ -1,3 +1,6 @@
+<img width="355" height="732" alt="image" src="https://github.com/user-attachments/assets/9a4ce60d-2ca1-4961-b1d2-4df3e18dd158" />
+
+
 ## 1. Basic Full-Screen Background Image (Most Used)
 
 ### Using `Container` + `BoxDecoration`
