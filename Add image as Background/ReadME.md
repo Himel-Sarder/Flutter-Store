@@ -84,7 +84,7 @@ class BackgroundWrapper extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/bg.jpg'),
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
       ),
       child: child,
@@ -112,7 +112,8 @@ Scaffold(
 
 ## 4. Background Image + Dark Overlay (Professional Look)
 
-Use this if text is hard to read.
+Use this if text is hard to read.   
+In templates .dart body part
 
 ```dart
 Stack(
