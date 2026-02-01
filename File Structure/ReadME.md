@@ -184,5 +184,3 @@ This structure scales well for **large apps**.
 | `lib/screens/*` | UI pages          |
 | `pubspec.yaml`  | Packages & assets |
 | `lib/widgets/*` | Reusable UI       |
-
-Just tell me what you want next.
