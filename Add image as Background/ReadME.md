@@ -84,7 +84,7 @@ class BackgroundWrapper extends StatelessWidget {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/bg.jpg'),
-          fit: BoxFit.contain,
+          fit: BoxFit.cover,
         ),
       ),
       child: child,
