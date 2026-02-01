@@ -1,4 +1,4 @@
-<img width="356" height="732" alt="image" src="https://github.com/user-attachments/assets/d4cd57c5-d029-4063-828a-2624bf891873" />
+<img width="355" height="737" alt="image" src="https://github.com/user-attachments/assets/9b99cc63-dd5f-4fb8-ae2b-32a2bf1e1f9e" />
 
 
 ## Download From Here : https://iconscout.com/lottie-animations
