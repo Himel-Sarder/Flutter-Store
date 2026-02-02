@@ -98,6 +98,8 @@ Controls **vertical alignment** inside the row.
 | `stretch`  | Fill height          |
 | `baseline` | Align text baselines |
 
+<img width="2372" height="800" alt="image" src="https://github.com/user-attachments/assets/cb773ddd-3292-4aad-9b73-5ff55c8355f7" />
+
 Example:
 
 ```dart
@@ -213,6 +215,9 @@ Takes **only what it needs**.
 ```dart
 Flexible(child: Text("Flexible"))
 ```
+
+<img width="1645" height="907" alt="image" src="https://github.com/user-attachments/assets/202e4ea9-1254-4902-b42e-f73f6bbe15f7" />
+<img width="1504" height="500" alt="image" src="https://github.com/user-attachments/assets/1ee67ebf-c9be-4861-8ecc-34da42fd55d9" />
 
 ---
 
