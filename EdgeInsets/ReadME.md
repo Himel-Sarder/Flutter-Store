@@ -1,3 +1,6 @@
+<img width="357" height="736" alt="image" src="https://github.com/user-attachments/assets/425c19dd-7aa1-4938-a3ac-fb7e477cb4ab" />
+
+
 ## What is `EdgeInsets`?
 
 `EdgeInsets` is used for padding or margin around widgets. Commonly used in:
