@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/b743a01e-839f-49c5-8df8-230eae496e06
 ## Deault (ClampingScrollPhysics())
 https://github.com/user-attachments/assets/d96ddfcf-bf67-4410-889e-73f4e331c53b
 
