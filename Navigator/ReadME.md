@@ -136,3 +136,11 @@ Benefits:
 * `pushReplacement` → replace screen
 * `pushAndRemoveUntil` → clear stack
 * Named routes → best for large apps
+
+### Summary of buttons of Second Screen:
+
+| Button | Navigation Type                  | Behavior                                                           |
+| ------ | -------------------------------- | ------------------------------------------------------------------ |
+| Blue   | `Navigator.push()`               | Go to `LastScreen`, back returns to `SecondScreen`.                |
+| Green  | `Navigator.pushReplacement()`    | Replace `SecondScreen` with `LastScreen`, back won’t return.       |
+| Red    | `Navigator.pushAndRemoveUntil()` | Go to `LastScreen` and remove all previous routes, back exits app. |
