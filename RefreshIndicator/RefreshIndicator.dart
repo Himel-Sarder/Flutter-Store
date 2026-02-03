@@ -14,6 +14,11 @@ class MenuScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Menu'), backgroundColor: Colors.cyan),
       body: RefreshIndicator(
         onRefresh: _onRefresh,
+        displacement: 20.0,
+        color: Colors.green,
+        strokeWidth: 4.0,
+        // edgeOffset: 10.0,
+        // backgroundColor: Colors.red,
         child: ListView.builder(
           physics: const AlwaysScrollableScrollPhysics(),
           itemCount: 20,
