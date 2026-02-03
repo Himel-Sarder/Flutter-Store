@@ -53,140 +53,38 @@ SingleChildScrollView(
 )
 ```
 
----
+## SingleChildScrollView Properties
 
-## All Important Properties Explained
+| Property                  | Type                                | Default                   | Description                                                                                                                 |
+| ------------------------- | ----------------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `child`                   | `Widget`                            | required                  | The single widget that will be made scrollable. Usually a `Column` or `Row`.                                                |
+| `scrollDirection`         | `Axis`                              | `Axis.vertical`           | Direction of scrolling (`Axis.vertical` or `Axis.horizontal`).                                                              |
+| `reverse`                 | `bool`                              | `false`                   | If true, scroll view scrolls in the **opposite direction**. Useful for chat UIs.                                            |
+| `padding`                 | `EdgeInsetsGeometry?`               | null                      | Adds padding around the scrollable child.                                                                                   |
+| `primary`                 | `bool?`                             | true if no controller     | Determines if this is the **primary scroll view**. Only one scroll view should be primary.                                  |
+| `physics`                 | `ScrollPhysics?`                    | null                      | Defines the scroll behavior. Examples: `BouncingScrollPhysics`, `ClampingScrollPhysics`, `AlwaysScrollableScrollPhysics`.   |
+| `controller`              | `ScrollController?`                 | null                      | Allows programmatic control of scrolling (scroll to position, listen to scroll).                                            |
+| `keyboardDismissBehavior` | `ScrollViewKeyboardDismissBehavior` | `manual`                  | Determines keyboard dismissal during scrolling: `onDrag` or `manual`.                                                       |
+| `clipBehavior`            | `Clip`                              | `Clip.hardEdge`           | How content outside the viewport is clipped: `Clip.none`, `Clip.hardEdge`, `Clip.antiAlias`, `Clip.antiAliasWithSaveLayer`. |
+| `restorationId`           | `String?`                           | null                      | Used for **state restoration** to save/restore scroll position.                                                             |
+| `dragStartBehavior`       | `DragStartBehavior`                 | `DragStartBehavior.start` | Determines when drag starts for gestures: at `start` or `down`.                                                             |
+| `semanticChildCount`      | `int?`                              | null                      | Number of scrollable items for accessibility; useful for screen readers.                                                    |
+| `scrollBehavior`          | `ScrollBehavior?`                   | null                      | Defines platform-specific scrolling behavior. Can customize overscroll, drag physics, etc.                                  |
 
-### 1. `child` (Required)
 
-The widget that will scroll.
+### Notes on Usage
 
-```dart
-child: Column(...)
-```
+1. **Child**: Only **one widget** is allowed. Use a `Column` or `Row` if multiple children are needed.
+2. **ScrollDirection**:
 
----
-
-### 2. `scrollDirection`
-
-Controls scroll direction.
-
-```dart
-scrollDirection: Axis.vertical,   // default
-scrollDirection: Axis.horizontal,
-```
-
-Horizontal example:
-
-```dart
-SingleChildScrollView(
-  scrollDirection: Axis.horizontal,
-  child: Row(
-    children: [
-      Container(width: 200, height: 100, color: Colors.red),
-      Container(width: 200, height: 100, color: Colors.blue),
-    ],
-  ),
-)
-```
-
----
-
-### 3. `reverse`
-
-Reverses scroll direction.
-
-```dart
-reverse: true,
-```
-
-Use cases:
-
-* Chat UI
-* Bottom-up content
-
----
-
-### 4. `padding`
-
-Adds space inside scroll view.
-
-```dart
-padding: EdgeInsets.all(16),
-padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-```
-
----
-
-### 5. `physics`
-
-Controls scrolling behavior.
-
-Common values:
-
-```dart
-physics: BouncingScrollPhysics(),     // iOS-style
-physics: ClampingScrollPhysics(),     // Android default
-physics: NeverScrollableScrollPhysics(), // disable scroll
-physics: AlwaysScrollableScrollPhysics(),
-```
-
-Example:
-
-```dart
-physics: BouncingScrollPhysics(),
-```
-
----
-
-### 6. `controller`
-
-Used to control scroll programmatically.
-
-```dart
-final ScrollController _controller = ScrollController();
-
-SingleChildScrollView(
-  controller: _controller,
-  child: Column(...)
-)
-```
-
-Scroll to bottom:
-
-```dart
-_controller.jumpTo(_controller.position.maxScrollExtent);
-```
-
----
-
-### 7. `keyboardDismissBehavior`
-
-Controls keyboard behavior on scroll.
-
-```dart
-keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-```
-
-Options:
-
-* `onDrag` → keyboard hides when scrolling
-* `manual` → keyboard stays
-
-Very useful for forms.
-
----
-
-### 8. `clipBehavior`
-
-Controls how overflow is clipped.
-
-```dart
-clipBehavior: Clip.hardEdge,   // default
-clipBehavior: Clip.none,
-```
-
----
+   * Vertical (default): scroll up/down
+   * Horizontal: scroll left/right
+3. **Reverse**: Often used for **chat apps**, where latest messages appear at the bottom.
+4. **Physics**: Combines with `RefreshIndicator` for pull-to-refresh.
+5. **Controller**: Required if you want to programmatically scroll or detect scroll events.
+6. **KeyboardDismissBehavior**: Set `onDrag` for forms, so keyboard hides automatically.
+7. **ClipBehavior**: Usually leave default `hardEdge`, unless using animations or effects outside the scrollable area.
+8. **SemanticChildCount**: Important for **accessibility**; helps screen readers know how many items exist.
 
 ## Correct Usage Pattern (Very Important)
 
