@@ -1,3 +1,5 @@
+<img width="353" height="733" alt="image" src="https://github.com/user-attachments/assets/08d33ec2-3b95-4d54-97a9-9831bbfbb91f" />
+
 ## What is Stack used for?
 
 * Overlapping widgets (image + text, badge on icon)
