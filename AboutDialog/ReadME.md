@@ -1,3 +1,5 @@
+<img width="359" height="737" alt="image" src="https://github.com/user-attachments/assets/86f6386a-43da-4382-b32f-7734d2c66a11" />
+
 ## 1. `AboutDialog` (basic widget)
 
 You usually show it using `showDialog()`.
