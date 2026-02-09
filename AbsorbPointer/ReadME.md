@@ -1,3 +1,10 @@
+
+
+
+https://github.com/user-attachments/assets/65989c46-b4d8-4934-8430-c1fa7d2dc5da
+
+
+
 `AbsorbPointer` is a Flutter widget used to **block touch interactions** (tap, swipe, press) for its child **without changing its visual appearance**.
 
 Think of it as:
@@ -99,6 +106,3 @@ AbsorbPointer(
 * User still sees everything normally
 * Good for **temporary blocking**
 * Not ideal for permanent disabled state (use `onPressed: null` instead)
-
-
-Just tell me.
