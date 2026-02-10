@@ -68,14 +68,57 @@ InkWell(
 )
 ```
 
-### Splash & highlight color
+## `InkWell` Properties Table
+
+| Property               | Type                             | Description               |
+| ---------------------- | -------------------------------- | ------------------------- |
+| `child`                | `Widget`                         | Widget inside InkWell     |
+| `onTap`                | `VoidCallback?`                  | Called on single tap      |
+| `onDoubleTap`          | `VoidCallback?`                  | Called on double tap      |
+| `onLongPress`          | `VoidCallback?`                  | Called on long press      |
+| `onTapDown`            | `GestureTapDownCallback?`        | Tap start callback        |
+| `onTapUp`              | `GestureTapUpCallback?`          | Tap end callback          |
+| `onTapCancel`          | `VoidCallback?`                  | Tap canceled              |
+| `onHover`              | `ValueChanged<bool>?`            | Mouse hover (web/desktop) |
+| `onFocusChange`        | `ValueChanged<bool>?`            | Focus change              |
+| `splashColor`          | `Color?`                         | Ripple color              |
+| `highlightColor`       | `Color?`                         | Pressed background color  |
+| `hoverColor`           | `Color?`                         | Hover background color    |
+| `focusColor`           | `Color?`                         | Focus background color    |
+| `borderRadius`         | `BorderRadius?`                  | Ripple corner radius      |
+| `customBorder`         | `ShapeBorder?`                   | Custom ripple shape       |
+| `radius`               | `double?`                        | Splash radius             |
+| `containedInkWell`     | `bool`                           | Restrict ripple to bounds |
+| `enableFeedback`       | `bool`                           | Sound/haptic feedback     |
+| `excludeFromSemantics` | `bool`                           | Accessibility exclusion   |
+| `mouseCursor`          | `MouseCursor?`                   | Cursor on hover           |
+| `overlayColor`         | `MaterialStateProperty<Color?>?` | State-based overlay       |
+
+## Most used properties (quick list)
 
 ```dart
-InkWell(
-  splashColor: Colors.red.withOpacity(0.3),
-  highlightColor: Colors.transparent,
-  onTap: () {},
-  child: const Text('Custom ripple'),
+onTap
+child
+splashColor
+borderRadius
+highlightColor
+```
+
+## Minimal example using key properties
+
+```dart
+Material(
+  color: Colors.blue,
+  borderRadius: BorderRadius.circular(12),
+  child: InkWell(
+    borderRadius: BorderRadius.circular(12),
+    splashColor: Colors.white24,
+    onTap: () {},
+    child: const Padding(
+      padding: EdgeInsets.all(16),
+      child: Text('Tap me', style: TextStyle(color: Colors.white)),
+    ),
+  ),
 )
 ```
 
